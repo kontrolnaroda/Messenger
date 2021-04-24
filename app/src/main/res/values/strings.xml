@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Messenger</string>
+    <string name="textMsg">Введите сообщение</string>
+    <string name="buttonMsge">Отправить</string>
 </resources>
