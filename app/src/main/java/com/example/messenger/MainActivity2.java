@@ -17,5 +17,6 @@ private TextView textViewMsg;
        String msg = intent.getStringExtra("msg");
        textViewMsg.setText(msg);
 
+
     }
 }
