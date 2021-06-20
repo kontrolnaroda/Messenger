@@ -19,10 +19,16 @@ private EditText editText;
     }
 
     public void sendMsg(View view) {
-        Intent intent = new Intent(this, MainActivity2.class);
+      //  Intent intent = new Intent(this, MainActivity2.class);
         String msg = editText.getText().toString();
-        intent.putExtra("msg", msg);
-        startActivity(intent);
+     //   intent.putExtra("msg", msg);
+      //  startActivity(intent);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, msg);
+
+        Intent chosenIntent = Intent.createChooser(intent, "привет");
+        startActivity(chosenIntent);
     }
 
 }
